@@ -14,7 +14,11 @@ function drawGrid() {
   ctx.setLineDash([2, 4]);
 
   function drawBorder() {
-
+    ctx.beginPath();
+    ctx.setTransform(1,0,0,1, 0, 0);
+    ctx.roundRect(0, 0, canvas.width, canvas.height, 20);
+    ctx.stroke();
+    ctx.closePath();
   }
 
   function drawLines() {
