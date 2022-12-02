@@ -1,6 +1,6 @@
 # grid-js
 
-This project is a small example of how to draw a grid using JavaScript and the HTML 5 canvas tag. IT supports a variable number of lines along both the x and y axis as well as light and dark mode.
+This project is a small example of how to draw a grid using JavaScript and the HTML 5 canvas tag. It supports a variable number of lines along both the x and y axis as well as light and dark mode.
 
 To run it, clone the repository and open `index.html` in your favorite browser.
 
