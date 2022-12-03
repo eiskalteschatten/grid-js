@@ -16,7 +16,15 @@ function drawGrid() {
   function drawBorder() {
     ctx.beginPath();
     ctx.setTransform(1,0,0,1, 0, 0);
-    ctx.roundRect(0, 0, canvas.width, canvas.height, 20);
+
+    // roundRect doesn't work in Firefox and older browsers, so use a square grid as a fallback
+    if ('roundRect' in ctx) {
+      ctx.roundRect(0, 0, canvas.width, canvas.height, 20);
+    }
+    else {
+      ctx.rect(0, 0, canvas.width, canvas.height);
+    }
+
     ctx.stroke();
     ctx.closePath();
   }
